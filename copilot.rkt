@@ -76,7 +76,7 @@
 #|
  2. Expanding the FLANG BNF language
  Extend your BNF and Parser to Support this syntax. Note that `then-do’ and
- `else-do’ are terminals and are part of the syntax of the “if” special form.
+ `else-do` are terminals and are part of the syntax of the “if” special form.
  #| The grammar:
  <FLANG> ::= <num> ;; Rule 1
  | { + <FLANG> <FLANG> } ;; Rule 2
@@ -107,7 +107,7 @@
  type definition and the parse-sexpr procedure.
  (define-type FLANG
  [Num Number]
- ... Original interpreter’s code omitted...
+ ... Original interpreter's code omitted...
  [Call FLANG FLANG]
  [Bool <--fill in 1 -->]
  [Bigger <--fill in 2 -->]
@@ -124,7 +124,7 @@
  ['False <--fill in 1-->)]
 
  [(symbol: name) (Id name)]
- ... Original interpreter’s code omitted...
+ ... Original interpreter's code omitted...
  [(list 'call fun arg) (Call (parse-sexpr fun) (parse-sexpr arg))]
  [(list '= lhs rhs) (Equal <--fill in 2 -->)]
  [(list '> lhs rhs) <--fill in 3 -->]
@@ -173,7 +173,7 @@
  ;; expression contains no free instances of the second argument
  (define (subst expr from to)
  (cases expr
- ... Original interpreter’s code omitted...
+ ... Original interpreter's code omitted...
 
  [(Bool b) <--fill in 1 -->]
  [(Equal l r) <--fill in 2 -->]
@@ -263,7 +263,7 @@
  ;; evaluates FLANG expressions by reducing them to *expressions*
  (define (eval expr)
  (cases expr
- ... Original interpreter’s code omitted...
+ ... Original interpreter's code omitted...
  [(Bool b) <--fill in 1 -->]
  [<--fill in 2 -->]
  [<--fill in 3 -->]
